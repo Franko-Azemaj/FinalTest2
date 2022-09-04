@@ -89,13 +89,13 @@ namespace FinalTest2.Migrations
             modelBuilder.Entity("FinalTest2.Models.Request", b =>
                 {
                     b.HasOne("FinalTest2.Models.User", "Reciver")
-                        .WithMany("Requests")
+                        .WithMany("ReciverRequests")
                         .HasForeignKey("ReciverId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("FinalTest2.Models.User", "Sender")
-                        .WithMany()
+                        .WithMany("SenderRequests")
                         .HasForeignKey("SenderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -107,7 +107,9 @@ namespace FinalTest2.Migrations
 
             modelBuilder.Entity("FinalTest2.Models.User", b =>
                 {
-                    b.Navigation("Requests");
+                    b.Navigation("ReciverRequests");
+
+                    b.Navigation("SenderRequests");
                 });
 #pragma warning restore 612, 618
         }

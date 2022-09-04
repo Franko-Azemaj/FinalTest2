@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+ShwV7agC1ePa1YSgZjYaVpHoPGhJPB2CtXrcrDP2zTYbgwj9YtGGj191pNyYQzjh++M7ruiQNDnoz4bdJTMfw==",
+  "dgSpecHash": "D4nZxBYMR4Ex7VW3vQp/sMHs/v356rhN75s2FQnjrwtuOaes9XHEnaZv0XzqV+32xKCA92qFdaoM6b5Fu1ILDg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\Exam\\FinalTest2\\FinalTest2.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\FinalTestSecond\\FinalTest2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",

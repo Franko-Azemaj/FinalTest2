@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace FinalTest2.Migrations
 {
     [DbContext(typeof(MyContext))]
-    [Migration("20220904090434_First")]
+    [Migration("20220904193747_First")]
     partial class First
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -91,13 +91,13 @@ namespace FinalTest2.Migrations
             modelBuilder.Entity("FinalTest2.Models.Request", b =>
                 {
                     b.HasOne("FinalTest2.Models.User", "Reciver")
-                        .WithMany("Requests")
+                        .WithMany("ReciverRequests")
                         .HasForeignKey("ReciverId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("FinalTest2.Models.User", "Sender")
-                        .WithMany()
+                        .WithMany("SenderRequests")
                         .HasForeignKey("SenderId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -109,7 +109,9 @@ namespace FinalTest2.Migrations
 
             modelBuilder.Entity("FinalTest2.Models.User", b =>
                 {
-                    b.Navigation("Requests");
+                    b.Navigation("ReciverRequests");
+
+                    b.Navigation("SenderRequests");
                 });
 #pragma warning restore 612, 618
         }

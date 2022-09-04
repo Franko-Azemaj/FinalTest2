@@ -710,11 +710,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Exam\\FinalTest2\\FinalTest2.csproj",
+      "projectUniqueName": "c:\\Users\\HP\\Desktop\\FinalTestSecond\\FinalTest2.csproj",
       "projectName": "FinalTest2",
-      "projectPath": "C:\\Users\\HP\\Desktop\\Exam\\FinalTest2\\FinalTest2.csproj",
+      "projectPath": "c:\\Users\\HP\\Desktop\\FinalTestSecond\\FinalTest2.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\Exam\\FinalTest2\\obj\\",
+      "outputPath": "c:\\Users\\HP\\Desktop\\FinalTestSecond\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
