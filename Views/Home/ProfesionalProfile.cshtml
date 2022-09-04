@@ -1,0 +1,76 @@
+<div class="mt-4 row">
+    <div class="col-sm-8">
+        <h2>@ViewBag.LogedInUser.FirstName @ViewBag.LogedInUser.LastName</h2>
+    </div>
+    <div class="col-sm-4">
+        <a class="btn btn-primary" href="/">All Users</a>
+        <a class="btn btn-primary" href="/logout">LogOut</a>
+    </div>
+
+</div>
+
+<div class="mt-5 row">
+
+    <h4 class="mb-4">Here is my profile description</h4>
+    <div class="mb-5 col-sm-5">
+       
+        </h3><textarea cols="30" rows="6">@ViewBag.LogedInUser.Description</textarea>
+    
+    </div>
+    
+</div>
+
+<div class="mt-5 row">
+
+    <h3>Your Professional Network:</h3>
+    <table class="table-border">
+            
+            <tbody>
+                @foreach (var miqte in ViewBag.miqte)
+                {
+                   <tr>
+                        @if (@miqte.SenderId == ViewBag.LogedInUser.UserId)
+                        {
+                            <td><a href="/users/@miqte.ReciverId">@miqte.Reciver.FirstName</a></td>
+                        }
+                        else
+                        {
+
+                            <td><a href="/users/@miqte.SenderId">@miqte.Sender.FirstName</a></td>
+
+                        }
+                        <td><a href="/RemoveF/@miqte.RequestId" class="btn btn-danger">Remove</a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    
+</div>
+
+ <div class="col-sm-3">
+        <h3>Invations:</h3>
+        <p>The following people asked you to be their network:</p>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>
+                        Actions
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var requests in ViewBag.requests)
+                {
+                    <tr>
+                        <td>@requests.RequestId</td>
+                        <td><a href="/users/@requests.SenderId">@requests.Sender.FirstName @requests.Sender.LastName</a></td>
+                        <td><a href="/AcceptR/@requests.RequestId" class=" btn btn-primary">Accept Invite</a>
+                            <a href="/DeclineR/@requests.RequestId" class="btn btn-danger">Ignore</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div> 
+
